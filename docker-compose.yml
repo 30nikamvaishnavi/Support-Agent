@@ -1,0 +1,14 @@
+services:
+  support-agent:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - GEMINI_MODEL=${GEMINI_MODEL:-gemini-2.5-flash}
+      - LLM_RPM=${LLM_RPM:-10}
+      - DEMO_MODE=${DEMO_MODE:-0}
+      - ADMIN_VIEW=${ADMIN_VIEW:-0}
+    volumes:
+      - ./data:/app/data
+      - ./results:/app/results

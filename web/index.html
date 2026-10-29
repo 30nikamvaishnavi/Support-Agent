@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <title>ShopSphere Support Agent</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%92%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="nav" aria-label="Main navigation">
+    <div class="brand">
+      <span class="brand-logo" aria-hidden="true">🛒</span>
+      <div><strong>ShopSphere</strong><small>Support Agent</small></div>
+    </div>
+    <nav class="nav-links" id="nav-links">
+      <a href="#chat" data-page="chat"><span aria-hidden="true">💬</span> Chat</a>
+      <a href="#evaluation" data-page="evaluation"><span aria-hidden="true">📊</span> Evaluation</a>
+      <a href="#tickets" data-page="tickets"><span aria-hidden="true">🎫</span> Tickets</a>
+      <a href="#policies" data-page="policies"><span aria-hidden="true">📘</span> Policies</a>
+      <a href="#orders" data-page="orders" id="nav-orders" hidden><span aria-hidden="true">📦</span> Orders</a>
+    </nav>
+    <div class="nav-foot">
+      <div id="status-chips" class="chips"></div>
+      <button class="btn ghost small" id="theme-toggle" type="button" aria-label="Toggle light or dark theme">Theme</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div id="banner" class="banner" hidden></div>
+
+    <section id="page-chat" class="page">
+      <header class="page-head">
+        <div>
+          <h1>Customer support chat</h1>
+          <p class="muted">A fictional store with fictional customers. Please don’t enter real personal data.</p>
+        </div>
+        <button class="btn ghost" id="new-chat" type="button">New conversation</button>
+      </header>
+      <div class="chat-grid">
+        <div class="card chat-card">
+          <div id="messages" class="messages" aria-live="polite">
+            <div class="empty" id="chat-empty">
+              <div class="empty-icon" aria-hidden="true">👋</div>
+              <h3>How can I help today?</h3>
+              <p class="muted">Ask about an order, a refund, or a store policy. Tap a scenario below to fill the box, then press Enter.</p>
+            </div>
+          </div>
+          <div class="chips scenario-chips" id="scenario-chips" aria-label="Try a scenario"></div>
+          <div class="composer">
+            <textarea id="input" rows="1" maxlength="1000" placeholder="Type your message…" aria-label="Your message"></textarea>
+            <button class="btn primary" id="send" type="button">Send</button>
+          </div>
+        </div>
+
+        <aside class="card trace-card" aria-label="Agent trace">
+          <h2>What the agent did</h2>
+          <p class="muted small-text">Built only from the fields the backend returned for the last message.</p>
+          <ol class="trace" id="trace">
+            <li class="trace-empty muted">Send a message to see the steps here.</li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <section id="page-evaluation" class="page" hidden>
+      <header class="page-head">
+        <div>
+          <h1>Evaluation</h1>
+          <p class="muted" id="eval-meta">Loading…</p>
+        </div>
+        <div class="head-actions">
+          <div class="seg" role="group" aria-label="Which results">
+            <button type="button" id="mode-real" class="active">Real run</button>
+            <button type="button" id="mode-demo">Demo run</button>
+          </div>
+          <button class="btn primary" id="run-eval" type="button" hidden>Run evaluation</button>
+        </div>
+      </header>
+      <div id="eval-warning" class="banner warn" hidden></div>
+      <div id="eval-progress" class="card progress-card" hidden>
+        <div class="progress-top"><strong id="progress-label">Running…</strong><span class="muted" id="progress-count"></span></div>
+        <div class="bar"><div class="bar-fill" id="progress-fill"></div></div>
+        <pre class="log" id="progress-log"></pre>
+      </div>
+      <div id="eval-empty" class="card empty" hidden></div>
+      <div id="eval-content" hidden>
+        <div class="kpis" id="kpis"></div>
+        <div class="card">
+          <div class="table-tools">
+            <div class="chips" id="eval-filters"></div>
+            <label class="check"><input type="checkbox" id="failed-only"> Failed cases only</label>
+          </div>
+          <div class="table-wrap">
+            <table class="table" id="eval-table">
+              <thead><tr><th>Case</th><th>Message</th><th>Intent</th><th>Tool</th><th>Result</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="page-tickets" class="page" hidden>
+      <header class="page-head">
+        <div>
+          <h1>Tickets</h1>
+          <p class="muted" id="tickets-scope"></p>
+        </div>
+        <button class="btn ghost" id="refresh-tickets" type="button">Refresh</button>
+      </header>
+      <div class="card">
+        <div class="table-wrap">
+          <table class="table" id="tickets-table">
+            <thead><tr><th>#</th><th>Category</th><th>Priority</th><th>Order</th><th>Summary</th><th>Created</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="empty" id="tickets-empty" hidden>
+          <div class="empty-icon" aria-hidden="true">🎫</div>
+          <h3>No tickets yet</h3>
+          <p class="muted">Tickets appear here when the agent files a refund request or a complaint, or hands you to a human.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="page-policies" class="page" hidden>
+      <header class="page-head">
+        <div>
+          <h1>Store policies</h1>
+          <p class="muted">The agent answers policy questions from this text using keyword search (BM25).</p>
+        </div>
+      </header>
+      <div class="card search-card">
+        <label for="faq-q" class="muted small-text">Try the search the agent uses</label>
+        <input id="faq-q" class="input" type="search" placeholder="e.g. do you ship outside India?" autocomplete="off">
+        <div id="faq-results" class="faq-results"></div>
+      </div>
+      <div class="policy-grid" id="policy-grid"></div>
+    </section>
+
+    <section id="page-orders" class="page" hidden>
+      <header class="page-head">
+        <div>
+          <h1>Orders</h1>
+          <p class="muted">Admin view. Fictional demo data.</p>
+        </div>
+      </header>
+      <div class="card"><div class="table-wrap">
+        <table class="table" id="orders-table">
+          <thead><tr><th>Order</th><th>Customer</th><th>Items</th><th>Status</th><th>Delivery</th><th>Amount (INR)</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div></div>
+    </section>
+  </main>
+</div>
+
+<div id="toasts" class="toasts" aria-live="polite"></div>
+<div id="drawer-backdrop" class="drawer-backdrop" hidden></div>
+<aside id="drawer" class="drawer" hidden aria-label="Case details">
+  <div class="drawer-head"><h2 id="drawer-title">Case</h2><button class="btn ghost small" id="drawer-close" type="button">Close</button></div>
+  <div id="drawer-body" class="drawer-body"></div>
+</aside>
+<script src="app.js"></script>
+</body>
+</html>

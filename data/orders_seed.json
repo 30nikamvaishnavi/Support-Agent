@@ -1,0 +1,302 @@
+[
+  {
+    "order_id": "ORD1001",
+    "customer_name": "Aarav Mehta",
+    "items": "Wireless Earbuds",
+    "status": "Delivered",
+    "order_date": "2026-10-20",
+    "delivery_date": "2026-10-25",
+    "delivery_note": "",
+    "amount": 2499
+  },
+  {
+    "order_id": "ORD1002",
+    "customer_name": "Diya Kulkarni",
+    "items": "Cotton Kurta Set (2)",
+    "status": "Shipped",
+    "order_date": "2026-10-25",
+    "delivery_date": "2026-10-30",
+    "delivery_note": "",
+    "amount": 1798
+  },
+  {
+    "order_id": "ORD1003",
+    "customer_name": "Rohan Patil",
+    "items": "Gaming Laptop 15 inch",
+    "status": "Delivered",
+    "order_date": "2026-10-22",
+    "delivery_date": "2026-10-26",
+    "delivery_note": "",
+    "amount": 74999
+  },
+  {
+    "order_id": "ORD1004",
+    "customer_name": "Sneha Joshi",
+    "items": "Yoga Mat, Water Bottle",
+    "status": "Out for delivery",
+    "order_date": "2026-10-24",
+    "delivery_date": "2026-10-28",
+    "delivery_note": "",
+    "amount": 1299
+  },
+  {
+    "order_id": "ORD1005",
+    "customer_name": "Kabir Shah",
+    "items": "Smart Watch",
+    "status": "Delayed",
+    "order_date": "2026-10-15",
+    "delivery_date": "2026-10-30",
+    "delivery_note": "Delayed at courier hub; originally due 2026-10-22",
+    "amount": 3999
+  },
+  {
+    "order_id": "ORD1006",
+    "customer_name": "Ananya Rao",
+    "items": "Running Shoes",
+    "status": "Delivered",
+    "order_date": "2026-10-05",
+    "delivery_date": "2026-10-10",
+    "delivery_note": "",
+    "amount": 3299
+  },
+  {
+    "order_id": "ORD1007",
+    "customer_name": "Vikram Singh",
+    "items": "Bluetooth Speaker",
+    "status": "Processing",
+    "order_date": "2026-10-27",
+    "delivery_date": "2026-11-02",
+    "delivery_note": "",
+    "amount": 1899
+  },
+  {
+    "order_id": "ORD1008",
+    "customer_name": "Meera Nair",
+    "items": "Air Fryer 4L",
+    "status": "Cancelled",
+    "order_date": "2026-10-18",
+    "delivery_date": "",
+    "delivery_note": "Cancelled by customer",
+    "amount": 5499
+  },
+  {
+    "order_id": "ORD1009",
+    "customer_name": "Arjun Desai",
+    "items": "Backpack 30L",
+    "status": "Delivered",
+    "order_date": "2026-10-21",
+    "delivery_date": "2026-10-24",
+    "delivery_note": "",
+    "amount": 1599
+  },
+  {
+    "order_id": "ORD1010",
+    "customer_name": "Isha Gupta",
+    "items": "Mixer Grinder",
+    "status": "Shipped",
+    "order_date": "2026-10-26",
+    "delivery_date": "2026-10-31",
+    "delivery_note": "",
+    "amount": 4299
+  },
+  {
+    "order_id": "ORD1011",
+    "customer_name": "Neha Pawar",
+    "items": "Phone Case, Screen Guard",
+    "status": "Delivered",
+    "order_date": "2026-10-23",
+    "delivery_date": "2026-10-27",
+    "delivery_note": "",
+    "amount": 599
+  },
+  {
+    "order_id": "ORD1012",
+    "customer_name": "Siddharth Kale",
+    "items": "4K Monitor 27 inch",
+    "status": "Delivered",
+    "order_date": "2026-10-24",
+    "delivery_date": "2026-10-27",
+    "delivery_note": "",
+    "amount": 18999
+  },
+  {
+    "order_id": "ORD1013",
+    "customer_name": "Pooja Jadhav",
+    "items": "Table Lamp",
+    "status": "Processing",
+    "order_date": "2026-10-28",
+    "delivery_date": "2026-11-03",
+    "delivery_note": "",
+    "amount": 899
+  },
+  {
+    "order_id": "ORD1014",
+    "customer_name": "Karan Malhotra",
+    "items": "Office Chair",
+    "status": "Delayed",
+    "order_date": "2026-10-12",
+    "delivery_date": "2026-11-01",
+    "delivery_note": "Delayed in warehouse; originally due 2026-10-20",
+    "amount": 8999
+  },
+  {
+    "order_id": "ORD1015",
+    "customer_name": "Riya Deshmukh",
+    "items": "Face Wash Combo",
+    "status": "Delivered",
+    "order_date": "2026-10-19",
+    "delivery_date": "2026-10-22",
+    "delivery_note": "",
+    "amount": 749
+  },
+  {
+    "order_id": "ORD1016",
+    "customer_name": "Aditya More",
+    "items": "Mechanical Keyboard",
+    "status": "Out for delivery",
+    "order_date": "2026-10-25",
+    "delivery_date": "2026-10-28",
+    "delivery_note": "",
+    "amount": 3499
+  },
+  {
+    "order_id": "ORD1017",
+    "customer_name": "Tanvi Bhosale",
+    "items": "Saree",
+    "status": "Shipped",
+    "order_date": "2026-10-24",
+    "delivery_date": "2026-10-29",
+    "delivery_note": "",
+    "amount": 2299
+  },
+  {
+    "order_id": "ORD1018",
+    "customer_name": "Yash Chavan",
+    "items": "Power Bank 20000mAh",
+    "status": "Delivered",
+    "order_date": "2026-10-22",
+    "delivery_date": "2026-10-25",
+    "delivery_note": "",
+    "amount": 1999
+  },
+  {
+    "order_id": "ORD1019",
+    "customer_name": "Priya Iyer",
+    "items": "Ceramic Dinner Set",
+    "status": "Cancelled",
+    "order_date": "2026-10-20",
+    "delivery_date": "",
+    "delivery_note": "Cancelled by customer",
+    "amount": 3299
+  },
+  {
+    "order_id": "ORD1020",
+    "customer_name": "Omkar Shinde",
+    "items": "Tablet 10 inch",
+    "status": "Delivered",
+    "order_date": "2026-10-14",
+    "delivery_date": "2026-10-18",
+    "delivery_note": "",
+    "amount": 15999
+  },
+  {
+    "order_id": "ORD1021",
+    "customer_name": "Shruti Menon",
+    "items": "Notebook Pack (5)",
+    "status": "Delivered",
+    "order_date": "2026-10-24",
+    "delivery_date": "2026-10-26",
+    "delivery_note": "",
+    "amount": 450
+  },
+  {
+    "order_id": "ORD1022",
+    "customer_name": "Harsh Vora",
+    "items": "Treadmill",
+    "status": "Processing",
+    "order_date": "2026-10-26",
+    "delivery_date": "2026-11-05",
+    "delivery_note": "",
+    "amount": 29999
+  },
+  {
+    "order_id": "ORD1023",
+    "customer_name": "Nisha Reddy",
+    "items": "Hair Dryer",
+    "status": "Shipped",
+    "order_date": "2026-10-25",
+    "delivery_date": "2026-10-30",
+    "delivery_note": "",
+    "amount": 1599
+  },
+  {
+    "order_id": "ORD1024",
+    "customer_name": "Varun Bansal",
+    "items": "Jeans (2)",
+    "status": "Delivered",
+    "order_date": "2026-10-23",
+    "delivery_date": "2026-10-26",
+    "delivery_note": "",
+    "amount": 2598
+  },
+  {
+    "order_id": "ORD1025",
+    "customer_name": "Sakshi Thakur",
+    "items": "Cookware Set",
+    "status": "Out for delivery",
+    "order_date": "2026-10-24",
+    "delivery_date": "2026-10-28",
+    "delivery_note": "",
+    "amount": 3799
+  },
+  {
+    "order_id": "ORD1026",
+    "customer_name": "Manish Yadav",
+    "items": "Trimmer",
+    "status": "Delivered",
+    "order_date": "2026-10-09",
+    "delivery_date": "2026-10-13",
+    "delivery_note": "",
+    "amount": 1399
+  },
+  {
+    "order_id": "ORD1027",
+    "customer_name": "Kavya Pillai",
+    "items": "Desk Organizer",
+    "status": "Delayed",
+    "order_date": "2026-10-14",
+    "delivery_date": "2026-10-31",
+    "delivery_note": "Delayed at courier hub; originally due 2026-10-21",
+    "amount": 699
+  },
+  {
+    "order_id": "ORD1028",
+    "customer_name": "Rahul Sawant",
+    "items": "Wireless Mouse",
+    "status": "Delivered",
+    "order_date": "2026-10-25",
+    "delivery_date": "2026-10-27",
+    "delivery_note": "",
+    "amount": 799
+  },
+  {
+    "order_id": "ORD1029",
+    "customer_name": "Anjali Mishra",
+    "items": "Bedsheet Set",
+    "status": "Shipped",
+    "order_date": "2026-10-26",
+    "delivery_date": "2026-10-31",
+    "delivery_note": "",
+    "amount": 1899
+  },
+  {
+    "order_id": "ORD1030",
+    "customer_name": "Dev Kapoor",
+    "items": "Over-ear Headphones",
+    "status": "Delivered",
+    "order_date": "2026-10-21",
+    "delivery_date": "2026-10-24",
+    "delivery_note": "",
+    "amount": 4999
+  }
+]
